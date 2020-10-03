@@ -1,0 +1,108 @@
+header {
+  height: 100vh;
+}
+.background {
+  background: url("../../../assets/pictures/background-1.jpg") no-repeat center top;
+  filter: blur(3px) brightness(80%);
+  height: 100%;
+  background-size: cover;
+}
+.container-content {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+}
+
+.presentation {
+  position: absolute;
+  left:10%;
+  bottom: 20%;
+}
+
+.presentation h1 {
+  color: #ffffff;
+  font-size: 2.3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.presentation h2 {
+  font-size: 1.3rem;
+  margin: 0px 0px 30px 0px;
+}
+
+.presentation a {
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:5px;
+	border:1px solid #124d77;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:1rem;
+	padding:8px 24px;
+	text-decoration:none;
+}
+.presentation a:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.presentation a:active {
+	position:relative;
+	top:1px;
+}
+
+@media screen and (max-device-width: 300px){
+  .presentation h1 {
+    font-size: 1.8rem;
+  }
+
+  .presentation h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-device-width: 768px){
+  .presentation h1 {
+    font-size: 2rem;
+  }
+
+  .presentation h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-device-width: 1280px){
+  .presentation {
+    left:27%;
+    bottom: 40%;
+  }
+
+  .presentation h1 {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+
+  .presentation h2 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  .presentation a {
+    font-size:1rem;
+  }
+}
+
+@media screen and (max-device-height: 600px){
+  .presentation {
+    bottom: 10%;
+  }
+}

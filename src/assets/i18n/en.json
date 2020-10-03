@@ -1,0 +1,13 @@
+{
+  "navbar":{
+    "home":"HOME",
+    "about":"ABOUT",
+    "skills":"SKILLS",
+    "contact":"CONTACT"
+  },
+  "FirstContainer":{
+    "FindOutMore":"Find out more",
+    "JonaszMakulak": "Jonasz Makulak",
+    "AspiringDeveloper": "Aspiring developer"
+  }
+}
