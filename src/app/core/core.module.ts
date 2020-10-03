@@ -3,12 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from './../shared/shared.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FirstContainerComponent } from './first-container/first-container.component';
+import { ContainerOneComponent } from './container-one/container-one.component';
 import { MainComponent } from './main/main.component';
-import { SecondContainerComponent } from './second-container/second-container.component';
+import { ContainerTwoComponent } from './container-two/container-two.component';
 
 @NgModule({
-  declarations: [NavbarComponent, FirstContainerComponent, MainComponent, SecondContainerComponent],
+  declarations: [
+    NavbarComponent,
+    ContainerOneComponent,
+    ContainerTwoComponent,
+    MainComponent
+  ],
   imports: [
     CommonModule,
     SharedModule

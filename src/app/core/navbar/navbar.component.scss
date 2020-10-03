@@ -1,12 +1,13 @@
 .main-header {
-  left: 7%;
-  right: 7%;
+  left: 8%;
+  right: 8%;
   position: absolute;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
+  animation-name: main-header_anim;
+  animation-duration: 2s;
 }
 
 .logo {
@@ -35,6 +36,11 @@
 .menu li a {
     font-weight: 300;
     color: #4d4d4d;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+  text-shadow: 0 0 .65px #333, 0 0 .65px #333;
 }
 
 @media screen and (min-device-width: 768px){
@@ -59,8 +65,4 @@
   .menu {
     font-size: 1.1rem;
   }
-}
-
-@media screen and (max-device-height: 450px){
-
 }
