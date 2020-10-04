@@ -1,0 +1,12 @@
+<div class="item-wrapper">
+    <!-- <div class="company-logo"></div> -->
+    <div class="company-logo" [ngStyle]="{'background-image': getImageSrc}"></div>
+    <section class="item-content">
+        <h1>{{position}}</h1>
+        <h2>{{companyName}}</h2>
+        <h3>{{dates}}</h3>
+        <div class="description">
+            <ng-content></ng-content>
+        </div>
+    </section>
+</div>

@@ -33,19 +33,20 @@ h2 {
   columns: 2;
   list-style: none;
   padding-left: 0px;
+  font-size: 1.15rem;
 }
 
 .technologies-list li {
   background-color: #8888886e;
   margin: 5px;
-  padding: 5px
+  padding: 7px
 }
 
 .technologies-list li:first-child {
   margin-top: 0px;
 }
 
-@media screen and (max-device-width: 400px){
+@media screen and (max-device-width: 450px){
   .technologies-list {
     columns: 1;
   }

@@ -20,7 +20,7 @@ export class ContainerTwoComponent implements OnInit {
     'JavaScript/TypeScript',
     'Angular',
     'PrimeNG'
-  ]
+  ];
 
   constructor() { }
 
