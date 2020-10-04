@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerTwoComponent implements OnInit {
 
+  skillsList: string[] = [
+    'C#',
+    '.NET Core',
+    'EntityFramework',
+    'WinForms',
+    'WPF',
+    'DevExpress',
+    'SQL',
+    'HTML 5',
+    'CSS',
+    'JavaScript/TypeScript',
+    'Angular',
+    'PrimeNG'
+  ]
+
   constructor() { }
 
   ngOnInit() {

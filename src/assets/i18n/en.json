@@ -5,9 +5,13 @@
     "skills":"SKILLS",
     "contact":"CONTACT"
   },
-  "FirstContainer":{
+  "ContainerOne":{
     "FindOutMore":"Find out more",
     "JonaszMakulak": "Jonasz Makulak",
     "AspiringDeveloper": "Aspiring developer"
+  },
+  "ContainerTwo": {
+    "WhoAmI":"Who am I?",
+    "MainTechnologies":"Main technologies"
   }
 }

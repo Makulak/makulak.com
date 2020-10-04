@@ -1,15 +1,52 @@
-article {
+.wrapper {
   background: url("../../../assets/pictures/background-2.jpg") no-repeat top fixed;
   background-size: cover;
   //filter: blur(2px) brightness(80%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   min-height: 300px;
+  color: white;
+  flex-direction: column;
 }
 
+.wrapper article {
+  max-width: 1100px;
+  padding: 0 5%;
+}
 
-.container-content {
+.description {
+  margin-bottom: 50px;
+}
 
+h1 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size:  1.4rem;
+  font-weight: 500;
+}
+
+.technologies-list {
+  columns: 2;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.technologies-list li {
+  background-color: #8888886e;
+  margin: 5px;
+  padding: 5px
+}
+
+.technologies-list li:first-child {
+  margin-top: 0px;
+}
+
+@media screen and (max-device-width: 400px){
+  .technologies-list {
+    columns: 1;
+  }
 }

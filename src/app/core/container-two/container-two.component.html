@@ -1,7 +1,19 @@
-<article>
-    <div class="container-content">
-        <h2>Mozilla Firefox</h2>
-        <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular
-            web browser since January, 2018.</p>
-    </div>
-</article>
+<div class="wrapper">
+    <article>
+        <section class="header">
+            <h1 translate>ContainerTwo.WhoAmI</h1>
+        </section>
+        <section class="description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </section>
+        <section class="main-technologies">
+            <h2 translate>ContainerTwo.MainTechnologies</h2>
+            <ul class="technologies-list">
+                <li *ngFor="let skill of skillsList">{{skill}}</li>
+
+            </ul>
+        </section>
+    </article>
+</div>
