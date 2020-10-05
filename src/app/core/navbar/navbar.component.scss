@@ -1,6 +1,6 @@
 .main-header {
-  left: 8%;
-  right: 8%;
+  left: 2%;
+  right: 2%;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -23,8 +23,7 @@
 .menu {
   list-style: none;
   flex-direction: row;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
   padding: 0px;
   display: none;
 }
@@ -35,7 +34,7 @@
 
 .menu li a {
     font-weight: 300;
-    color: #4d4d4d;
+    color: #2c2c2c;
     text-decoration: none;
 }
 
