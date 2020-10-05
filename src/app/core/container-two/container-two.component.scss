@@ -1,7 +1,6 @@
 .wrapper {
   background: url("../../../assets/pictures/background-2.jpg") no-repeat top fixed;
   background-size: cover;
-  //filter: blur(2px) brightness(80%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +16,8 @@
 
 .description {
   margin-bottom: 50px;
+  background-color: #00000069;
+  padding: 15px;
 }
 
 h1 {
@@ -37,7 +38,7 @@ h2 {
 }
 
 .technologies-list li {
-  background-color: #8888886e;
+  background-color: #00000069;
   margin: 5px;
   padding: 7px
 }
