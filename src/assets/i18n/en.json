@@ -1,20 +1,23 @@
 {
-  "navbar":{
-    "home":"HOME",
-    "about":"ABOUT",
-    "experience":"EXPERIENCE",
-    "contact":"CONTACT"
+  "navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "experience": "EXPERIENCE",
+    "contact": "CONTACT"
   },
-  "ContainerOne":{
-    "FindOutMore":"Find out more",
+  "ContainerOne": {
+    "FindOutMore": "Find out more",
     "JonaszMakulak": "Jonasz Makulak",
     "AspiringDeveloper": "Aspiring developer"
   },
   "ContainerTwo": {
-    "WhoAmI":"Who am I?",
-    "MainTechnologies":"Main technologies"
+    "WhoAmI": "Who am I?",
+    "MainTechnologies": "Main technologies"
   },
   "ContainerThree": {
     "Experience": "Experience"
+  },
+  "ContainerFour": {
+    "Contact": "Contact"
   }
 }

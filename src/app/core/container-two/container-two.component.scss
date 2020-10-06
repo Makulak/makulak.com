@@ -2,11 +2,11 @@
   background: url("../../../assets/pictures/background-2.jpg") no-repeat top fixed;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 300px;
   color: white;
-  flex-direction: column;
 }
 
 .wrapper article {
@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font-size:  1.4rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
@@ -40,14 +40,14 @@ h2 {
 .technologies-list li {
   background-color: #00000069;
   margin: 5px;
-  padding: 7px
+  padding: 8px 8px 8px 18px;
 }
 
 .technologies-list li:first-child {
   margin-top: 0px;
 }
 
-@media screen and (max-device-width: 450px){
+@media screen and (max-device-width: 450px) {
   .technologies-list {
     columns: 1;
   }
