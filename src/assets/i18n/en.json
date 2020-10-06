@@ -18,6 +18,7 @@
     "Experience": "Experience"
   },
   "ContainerFour": {
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "FooterText":"Jonasz Makulak &copy - 2020"
   }
 }
