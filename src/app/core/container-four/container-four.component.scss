@@ -23,32 +23,30 @@ h1 {
 }
 
 .contact-list {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top:30px;
 }
 
 a img {
-    margin: 10px;
+    margin: 20px;
     width: 80px;
     filter: brightness(0) invert(1);
 }
 
-.gradient {
+footer {
+    overflow: hidden;
     background: #000000;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(1, 1, 70, 1) 100%);
-    height: 30px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(1, 1, 70, 1) 90%);
+    min-height: 100px;
+    padding-top: 40px;
 }
 
-footer {
-    min-height: 80px;
-    background-color: black;
-}
 footer p {
     color: #757575;
-    width:fit-content;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
