@@ -5,12 +5,24 @@
     "experience": "EXPERIENCE",
     "contact": "CONTACT"
   },
-  "Content": {
-    "FindOutMore": "Find out more",
-    "AspiringDeveloper": "Aspiring developer",
-    "WhoAmI": "Who am I?",
-    "MainTechnologies": "Main technologies",
-    "Experience": "Experience",
-    "Contact": "Contact"
+  "content": {
+    "findOutMore": "Find out more",
+    "aspiringDeveloper": "Aspiring developer",
+    "whoAmI": "Who am I?",
+    "mainTechnologies": "Main technologies",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "experience": {
+    "ige-xao-item1": "Developing applications using WPF, WinForms and DevExpress framework",
+    "ige-xao-item2": "Writing documentation",
+    "hub-item1": "Creating and developing WinForms .NET applications",
+    "hub-item2": "Solving problems as support",
+    "hub-item3": "Writing documentation and specification",
+    "agilero-item1": "Creating and developing Angular and .NET applications",
+    "agilero-item2": "Designing and creating projects from the begenning to the production launch",
+    "agilero-item3": "Supporting customers",
+    "agilero-item4": "Fixing bugs and maintaining legacy software",
+    "agilero-item5": "Creating and management of the network and the company server"
   }
 }

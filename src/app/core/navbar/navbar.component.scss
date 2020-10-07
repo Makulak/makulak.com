@@ -23,7 +23,6 @@
 .menu {
   list-style: none;
   flex-direction: row;
-  font-size: 1.3rem;
   padding: 0px;
   display: none;
 }
@@ -32,17 +31,21 @@
   margin-right: 30px;
 }
 
-.menu li a {
-    font-weight: 300;
-    color: #2c2c2c;
-    text-decoration: none;
+.menu-button {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  background: transparent;
+  border: 0px;
+	text-decoration:none;
+	cursor:pointer;
 }
 
-.menu li a:hover {
-  text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+.menu-button:hover {
+  text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
 }
 
-@media screen and (min-device-width: 768px){
+@media screen and (min-device-width: 768px) {
   .menu {
     display: flex;
     visibility: visible;
@@ -55,13 +58,20 @@
   }
 }
 
-@media screen and (min-device-width: 1280px){
+@media screen and (min-device-width: 1100px) {
+  .main-header {
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media screen and (min-device-width: 1280px) {
   .main-header {
     left: 20%;
     right: 20%;
   }
 
   .menu {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
