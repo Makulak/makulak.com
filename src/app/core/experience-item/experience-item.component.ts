@@ -16,9 +16,4 @@ export class ExperienceItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  get getImageSrc(): string {
-    return 'url(' + this.imageSrc + ')';
-  }
-
 }
