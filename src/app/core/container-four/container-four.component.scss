@@ -1,27 +1,7 @@
-article {
-    min-height: 200px;
-    width: 100%;
-    height: 100%;
-    background-color: #010146;
-    color: white;
-    overflow: hidden;
+app-container-base {
+        background-color: #010146;
+        display: block;
 }
-
-h1 {
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 2.3rem;
-    font-weight: 500;
-}
-
-.article-content {
-    max-width: 1100px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 5%;
-}
-
 .contact-list {
     display: flex;
     flex-direction: row;
