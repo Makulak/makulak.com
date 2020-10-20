@@ -1,6 +1,6 @@
 <article>
     <div class="base-content">
-        <h1 [ngStyle]="{'color': titleColor}">{{title}}</h1>
+        <h1 *ngIf="title" [ngStyle]="{'color': titleColor}">{{title}}</h1>
         <ng-content></ng-content>
     </div>
 </article>
