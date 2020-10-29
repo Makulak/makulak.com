@@ -12,6 +12,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .menu {
@@ -43,6 +44,9 @@
   .menu {
     display: flex;
     visibility: visible;
+  }
+  .logo {
+    text-align: left;
   }
 }
 
