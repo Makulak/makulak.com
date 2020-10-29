@@ -10,6 +10,7 @@ import { ContainerThreeComponent } from './container-three/container-three.compo
 import { ExperienceItemComponent } from './experience-item/experience-item.component';
 import { ContainerFourComponent } from './container-four/container-four.component';
 import { ContainerBaseComponent } from './container-base/container-base.component';
+import { CodeEditorComponent } from './code-editor/code-editor.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContainerBaseComponent } from './container-base/container-base.componen
     ExperienceItemComponent,
     ContainerFourComponent,
     ContainerBaseComponent,
+    CodeEditorComponent,
   ],
   imports: [
     CommonModule,

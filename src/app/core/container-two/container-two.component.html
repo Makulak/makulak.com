@@ -1,39 +1,5 @@
 <app-container-base title="{{'content.whoAmI' | translate}}">
-    <div class="window-background">
-        <div class="titlebar">
-            <p>HelloWorld!</p>
-            <nav class="titlebar-btn-wrap">
-                <div class="titlebar-btn btn-green"></div>
-                <div class="titlebar-btn btn-yellow"></div>
-                <div class="titlebar-btn btn-red"></div>
-            </nav>
-        </div>
-        <div class="tab-wrapper">
-            <a (click)="changeCard('programmer')" class="tab" id="programmerTab">programmer.cs</a>
-            <a (click)="changeCard('experience')" class="tab" id="experienceTab">experience.cs</a>
-        </div>
-        <div class="description-wrapper">
-            <section class="lines-number">
-                1<br>
-                2<br>
-                3<br>
-                4<br>
-                5<br>
-            </section>
-            <section class="description" id="programmer">
-                <pre>
-class Programmer
-&#123;
-    firstName = Jonasz;
-    lastName = Makulak;
-&#125;
-                </pre>
-            </section>
-            <section class="description" id="experience">
-
-            </section>
-        </div>
-    </div>
+    <app-code-editor></app-code-editor>
     <section class="main-technologies">
         <h2 translate>content.mainTechnologies</h2>
         <ul class="technologies-list">

@@ -49,6 +49,17 @@ app-container-base {
   background: green;
 }
 
+.files-tree {
+background: #252525;
+width: 10%;
+}
+
+.main-window {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
 .window-background {
   background: #2d2d2d;
   display: flex;
@@ -66,7 +77,6 @@ app-container-base {
 .tab {
   padding: 10px;
   background: #252525;
-  
 }
 
 .tab.active {
