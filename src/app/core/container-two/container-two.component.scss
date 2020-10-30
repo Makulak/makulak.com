@@ -1,12 +1,12 @@
 app-container-base {
-  background: #6d6d6d;
+  background: url('../../../assets/pictures/background-4.jpg')no-repeat top fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 300px;
   color: white;
-  font-family: 'Inconsolata', monospace;
 }
 
 .titlebar {

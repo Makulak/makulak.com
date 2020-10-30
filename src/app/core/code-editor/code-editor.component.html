@@ -8,18 +8,18 @@
         </nav>
     </header>
     <main>
-        <aside>
+        <!-- <aside>
             <ul>Project
                 <ul class="files-list"> Models
                     <li>Programmer.cs</li>
                     <li>Experience.cs</li>
                 </ul>
             </ul>
-        </aside>
+        </aside> -->
         <section class="tab-content-wrapper">
             <nav class="tabs">
                 <a (click)="changeCard('programmer')" class="tab" id="programmerTab">Programmer.cs</a>
-                <a (click)="changeCard('experience')" class="tab" id="experienceTab">Experience.cs</a>
+                <a (click)="changeCard('skills')" class="tab" id="skillsTab">Skills.cs</a>
             </nav>
             <div class="lines-code-wrapper">
                 <div class="lines-content">
@@ -28,16 +28,24 @@
                     3<br>
                     4<br>
                     5<br>
+                    6<br>
+                    7<br>
+                    8<br>
+                    9<br>
+                    10<br>
                 </div>
                 <article class="code-content" id="programmer">
-                    class Programmer<br>
+                    class Test<br>
                     &#123;<br>
-                    public string FirstName;<br>
-                    public string LastName;<br>
-                    public DateTime DateOfBirth;<br>
+                    var goodProgrammer = new programmerBuilder()<br>
+                    .SetName('Jonasz')<br>
+                    .SetSurname('Makulak')<br>
+                    .SetDateOfBirth('1997-02-28')<br>
+                    .SetUniversity('Uniwerystet Jagielloński, Computer Science')<br>
+                    .Build();<br>
                     &#125;<br>
                 </article>
-                <article  class="code-content" id="experience">dupa</article>
+                <article class="code-content" id="skills">dupa</article>
             </div>
         </section>
     </main>
