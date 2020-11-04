@@ -19,7 +19,8 @@
         <section class="tab-content-wrapper">
             <nav class="tabs">
                 <a (click)="changeCard('programmer')" class="tab" id="programmerTab">Programmer.cs</a>
-                <a (click)="changeCard('skills')" class="tab" id="skillsTab">Skills.cs</a>
+                <a (click)="changeCard('about')" class="tab" id="aboutTab">AboutMe.cs</a>
+                <a (click)="changeCard('job')" class="tab" id="jobTab">DreamJob.cs</a>
             </nav>
             <div class="lines-code-wrapper">
                 <div class="lines-content">
@@ -35,17 +36,37 @@
                     10<br>
                 </div>
                 <article class="code-content" id="programmer">
-                    class Test<br>
+                    public Programmer SetBasicInfo()<br>
                     &#123;<br>
-                    var goodProgrammer = new programmerBuilder()<br>
+                    return new ProgrammerBuilder()<br>
                     .SetName('Jonasz')<br>
                     .SetSurname('Makulak')<br>
                     .SetDateOfBirth('1997-02-28')<br>
                     .SetUniversity('Uniwerystet Jagielloński, Computer Science')<br>
-                    .Build();<br>
+                    .Create();<br>
                     &#125;<br>
                 </article>
-                <article class="code-content" id="skills">dupa</article>
+                <article class="code-content" id="about">
+                    public Programmer SetAdditionalInfo()<br>
+                    &#123;<br>
+                    return SetBasicInfo()<br>
+                    .SetHobby('Playing guitar')<br>
+                    .SetHobby('Home brewery')<br>
+                    .SetHobby('Hitch-hiking')<br>
+                    .Create();<br>
+                    &#125;<br>
+                </article>
+                <article class="code-content" id="job">
+                    public Job CreateDreamJob()<br>
+                    &#123;<br>
+                    return new Job()<br>
+                    .AddRequirement('Owocowe środy', EImportance.High)<br>
+                    .AddRequirement('Dynamiczny zespół', EImportance.High)<br>
+                    .AddRequirement('Praca tylko w biurze', EImportance.Medium)<br>
+                    .AddRequirement('Kartofel pod keczupem', EImportance.Low)<br>
+                    .Create();<br>
+                    &#125;<br>
+                </article>
             </div>
         </section>
     </main>
