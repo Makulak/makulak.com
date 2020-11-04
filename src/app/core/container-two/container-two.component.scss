@@ -1,5 +1,5 @@
 app-container-base {
-  background: url('../../../assets/pictures/background-4.jpg')no-repeat top fixed;
+  background: url("../../../assets/pictures/background-4.jpg") no-repeat top fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -9,13 +9,18 @@ app-container-base {
   color: white;
 }
 
+app-code-editor {
+  margin: 5px;
+  display: block;
+}
+
 .titlebar {
   background: #3c3c3c;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding:7px;
+  padding: 7px;
 }
 
 .titlebar p {
@@ -34,7 +39,7 @@ app-container-base {
   height: 10px;
   width: 10px;
   border-radius: 5px;
-  margin:3px;
+  margin: 3px;
 }
 
 .btn-red {
@@ -50,8 +55,8 @@ app-container-base {
 }
 
 .files-tree {
-background: #252525;
-width: 10%;
+  background: #252525;
+  width: 10%;
 }
 
 .main-window {
@@ -102,7 +107,7 @@ width: 10%;
 .description {
   background-color: #1e1e1e;
   display: none;
-  width:100%;
+  width: 100%;
   padding: 7px;
 }
 
@@ -130,6 +135,12 @@ h2 {
 
 .technologies-list li:first-child {
   margin-top: 0px;
+}
+
+@media screen and (max-device-width: 300px) {
+  .technologies-list {
+  font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-device-width: 450px) {
