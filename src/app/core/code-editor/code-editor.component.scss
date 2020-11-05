@@ -70,6 +70,7 @@ aside {
   display: flex;
   flex-direction: row;
   overflow: auto;
+  font-size: 0.8rem;
 }
 
 .tab {
@@ -92,6 +93,7 @@ aside {
   display: flex;
   flex-direction: row;
   font-family: "Inconsolata", monospace;
+  font-size: 0.85rem;
 }
 
 .lines-content {
@@ -103,6 +105,7 @@ aside {
 
 article {
   width: 100%;
+  overflow: auto;
 }
 
 #code-content {
@@ -113,12 +116,42 @@ article {
   height: 100%;
   margin: 0;
   padding: 7px;
+  white-space: pre-wrap;
+  min-width: 300px;
 }
 
 footer {
   height: 20px;
 }
 
-.test{
-  font-size: 3rem;
+.blue-text {
+  color: #569cd6;
+}
+.purple-text {
+  color: #c586c0;
+}
+.yellow-text {
+  color: #b7dcaa;
+}
+.orange-text {
+  color: #ce9178;
+}
+.green-text {
+  color: #4ec9b0;
+}
+
+@media screen and (min-device-width: 450px) {
+  .lines-code-wrapper {
+    font-size: 1rem;
+  }
+
+  .tabs {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-device-width: 300px) {
+.lines-content {
+  display: none;
+}
 }

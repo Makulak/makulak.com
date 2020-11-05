@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right
+}
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
@@ -17,7 +22,9 @@ export class CodeEditorComponent implements OnInit {
     .SetName('Jonasz')
     .SetSurname('Makulak')
     .SetDateOfBirth('1997-02-28')
-    .SetUniversity('Uniwerystet Jagielloński, Computer Science')
+    .SetUniversity('Uniwerystet Jagielloński, Computer Science', TimeSpan.FromYears(2020-2015))
+    .LearnLanguage('English', Level.B2)
+    .LearnLanguage('Spanish', Level.A1)
     .Create();
     }`;
   }
@@ -37,7 +44,7 @@ export class CodeEditorComponent implements OnInit {
   private get jobContent(): string {
     return `public Job CreateDreamJob()
     {
-    return new Job()
+    return new JobBuilder()
     .AddRequirement('Dynamiczny zespół', EImportance.High)
     .AddRequirement('Owocowe środy', EImportance.Medium)
     .AddRequirement('Kartofel pod keczupem', EImportance.Low)
@@ -47,6 +54,7 @@ export class CodeEditorComponent implements OnInit {
 
   ngOnInit() {
     document.getElementById('programmerTab').click();
+    const x = Direction.Down;
   }
 
   changeCard(sectionId: string) {
@@ -76,18 +84,37 @@ export class CodeEditorComponent implements OnInit {
   }
 
   formatContent(content: string): string {
+
+    const spaces = window.innerWidth > 400 ? '   ' : ' ';
+
     content = content.replace(/\n/g, ''); // remove all new lines
     content = content.replace(/ {2,}/g, ''); // remove all white spaces
     content = content.replace(/\{/g, '\n\{\n'); // new line before and after opening bracket
     content = content.replace(/\}/g, '\n\}\n'); // new line before and after closing bracket
-    content = content.replace(/\)\./g, '\)\n   \.'); // new line and tab before dot
+    content = content.replace(/\)\./g, '\)\n' + spaces + '\.'); // new line and tab before dot
 
     content = content.replace(/{[\s\S]*?}/g, match => { // add spaces to bracket's content
-      return match.replace(/\n/g, '\n   ');
+      return match.replace(/\n/g, '\n' + spaces);
     });
 
     content = content.replace(/   \}/g, '\}'); // remove tab before closing bracket
 
+    // colors
+    content = content.replace(/new|public/g, match => {
+      return '<span class="blue-text">' + match + '</span>';
+    });
+    content = content.replace('return', match => {
+      return '<span class="purple-text">' + match + '</span>';
+    });
+    content = content.replace(/\.[\w]+/g, match => {
+      return '<span class="yellow-text">' + match + '</span>';
+    });
+    content = content.replace(/'.*'/g, match => {
+      return '<span class="orange-text">' + match + '</span>';
+    });
+    content = content.replace(/EImportance|TimeSpan|Level|Job |Programmer /g, match => {
+      return '<span class="green-text">' + match + '</span>';
+    });
 
     return content;
   }
