@@ -101,13 +101,24 @@ aside {
   text-align: right;
 }
 
-.code-content {
-  background-color: #1e1e1e;
-  display: none;
+article {
   width: 100%;
+}
+
+#code-content {
+  font-family: "Inconsolata", monospace;
+  background-color: #1e1e1e;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 7px;
 }
 
 footer {
   height: 20px;
+}
+
+.test{
+  font-size: 3rem;
 }
