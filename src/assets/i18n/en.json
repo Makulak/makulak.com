@@ -3,7 +3,9 @@
     "home": "HOME",
     "about": "ABOUT",
     "experience": "EXPERIENCE",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "enLanguage": "ENG",
+    "plLanguage": "PL"
   },
   "content": {
     "findOutMore": "Find out more",
@@ -12,6 +14,15 @@
     "mainTechnologies": "Main technologies",
     "experience": "Experience",
     "contact": "Contact"
+  },
+  "code": {
+    "university":"Jagiellonian university, Computer Science",
+    "english":"English",
+    "spanish":"Spanish",
+    "guitar":"guitar",
+    "brewery":"home brewing",
+    "hitchhiking":"hitch-hicking",
+    "hackathons":"hackathons"
   },
   "experience": {
     "ige-xao-item1": "Developing applications using WPF, WinForms and DevExpress framework",

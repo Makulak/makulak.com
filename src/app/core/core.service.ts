@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoreService {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   scrollTo(elementId: string) {
     if (elementId) {
@@ -15,5 +16,10 @@ export class CoreService {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+  }
+
+  changeLanguage(languageName: string) {
+    localStorage.setItem('language', languageName);
+    this.translate.use(languageName);
   }
 }

@@ -1,42 +1,47 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-enum Direction {
-  Up = 1,
-  Down,
-  Left,
-  Right
-}
+import { TranslateService } from '@ngx-translate/core';
+import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
+
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
   styleUrls: ['./code-editor.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class CodeEditorComponent implements OnInit {
+export class CodeEditorComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   private get programmerContent(): string {
+    const university = this.translate.instant('code.university');
+    const english = this.translate.instant('code.english');
+    const spanish = this.translate.instant('code.spanish');
+
     return `public Programmer SetBasicInfo()
     {
     return new ProgrammerBuilder()
     .SetName('Jonasz')
     .SetSurname('Makulak')
     .SetDateOfBirth('1997-02-28')
-    .SetUniversity('Uniwerystet Jagielloński, Computer Science', TimeSpan.FromYears(2020-2015))
-    .LearnLanguage('English', Level.B2)
-    .LearnLanguage('Spanish', Level.A1)
+    .Graduate('${university}', TimeSpan.FromYears(2020-2016))
+    .Learn('${english}', Level.B2)
+    .Learn('${spanish}', Level.A1)
     .Create();
     }`;
   }
 
   private get aboutContent(): string {
+    const guitar = this.translate.instant('code.guitar');
+    const brewery = this.translate.instant('code.brewery');
+    const hitchhiking = this.translate.instant('code.hitchhiking');
+    const hackathons = this.translate.instant('code.hackathons');
+
     return `public Programmer SetAdditionalInfo()
     {
     return SetBasicInfo()
-    .SetHobby('Playing guitar')
-    .SetHobby('Home brewery')
-    .SetHobby('Hitch-hiking')
-    .SetInterest('Hackathons')
+    .SetHobby('${guitar}')
+    .SetHobby('${brewery}')
+    .SetHobby('${hitchhiking}')
+    .SetInterest('${hackathons}')
     .Create();
     }`;
   }
@@ -53,8 +58,10 @@ export class CodeEditorComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
     document.getElementById('programmerTab').click();
-    const x = Direction.Down;
   }
 
   changeCard(sectionId: string) {
