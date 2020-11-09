@@ -8,7 +8,6 @@
     "plLanguage": "PL"
   },
   "content": {
-    "findOutMore": "Find out more",
     "aspiringDeveloper": "Aspiring developer",
     "whoAmI": "Who am I?",
     "mainTechnologies": "Main technologies",
@@ -19,10 +18,17 @@
     "university":"Jagiellonian university, Computer Science",
     "english":"English",
     "spanish":"Spanish",
-    "guitar":"guitar",
-    "brewery":"home brewing",
+    "playingGuitar":"playing guitar",
+    "homeBreweryAndWineMaking":"home brewing and wine making",
     "hitchhiking":"hitch-hicking",
-    "hackathons":"hackathons"
+    "hackathons":"taking part in hackathons",
+    "mobileTechnologies":"mobile technologies",
+    "remoteWork":"Possibility to work remotely",
+    "learnAndDevelopSkills":"Possibility to learn and develop skills",
+    "greatTeam":"Great team",
+    "newTechnologies":"Recent technologies",
+    "interestingProjects":"Interesting projects",
+    "money":"Good salary"
   },
   "experience": {
     "ige-xao-item1": "Developing applications using WPF, WinForms and DevExpress framework",

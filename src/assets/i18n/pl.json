@@ -1,12 +1,45 @@
 {
-  "navbar":{
-    "home":"asdf",
-    "about":"AasdfBOUT",
-    "skills":"asdf",
-    "contact":"CONTasdfACT"
+  "navbar": {
+    "home": "HOME",
+    "about": "O MNIE",
+    "experience": "DOŚWIADCZENIE",
+    "contact": "KONTAKT",
+    "enLanguage": "ENG",
+    "plLanguage": "PL"
   },
-  "ContainerOne":{
-    "FindOutMore":"Find out more",
-    "AspiringDeveloper": "Aspiring developer"
+  "content": {
+    "aspiringDeveloper": "Ambitny developer",
+    "whoAmI": "O mnie",
+    "mainTechnologies": "Główne technologie",
+    "experience": "Doświadczenie",
+    "contact": "Kontakt"
+  },
+  "code": {
+    "university":"Uniwersytet Jagielloński, Informatyka",
+    "english":"Angielski",
+    "spanish":"Hiszpański",
+    "playingGuitar":"Gra na gitarze",
+    "homeBreweryAndWineMaking":"Domowy wyrób alkoholi",
+    "hitchhiking":"Podróżowanie autostopem",
+    "hackathons":"Udział w hackathonach",
+    "mobileTechnologies":"Technologie mobilne",
+    "remoteWork":"Możliwość pracy zdalnej",
+    "learnAndDevelopSkills":"Możliwość nauki i rozwoju",
+    "greatTeam":"Dobry zespół",
+    "newTechnologies":"Nowe technologie",
+    "interestingProjects":"Interesujące projekty",
+    "money":"Dobre wynagrodzenie"
+  },
+  "experience": {
+    "ige-xao-item1": "Rozwijanie aplikacji z użyciem WPF, WinForms i DevExpress framework",
+    "ige-xao-item2": "Pisanie dokumentacji",
+    "hub-item1": "Tworzenie aplikacji WinForms .NET",
+    "hub-item2": "Wsparcie klienta",
+    "hub-item3": "Tworzenie dokumentacji oraz specyfikacji",
+    "agilero-item1": "Tworzenie aplikacji Angular oraz ASP.NET ",
+    "agilero-item2": "Projektowanie systemów od początku do wdrożenia produkcyjnego",
+    "agilero-item3": "Wsparcie klienta",
+    "agilero-item4": "Poprawa bugów oraz utrzymanie starego oprogramowania",
+    "agilero-item5": "Zarządzanie infrastrukturą sieciową"
   }
 }

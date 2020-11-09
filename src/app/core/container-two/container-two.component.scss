@@ -1,5 +1,5 @@
 app-container-base {
-  background: url("../../../assets/pictures/background-4.jpg") no-repeat top fixed;
+  background: url("../../../assets/pictures/background-2.jpg") no-repeat top fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -137,13 +137,13 @@ h2 {
   margin-top: 0px;
 }
 
-@media screen and (max-device-width: 300px) {
+@media screen and (max-device-width: 450px) {
   .technologies-list {
   font-size: 0.9rem;
   }
 }
 
-@media screen and (max-device-width: 450px) {
+@media screen and (max-device-width: 600px) {
   .technologies-list {
     columns: 1;
   }

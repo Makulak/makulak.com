@@ -1,5 +1,5 @@
 import { TranslateService } from '@ngx-translate/core';
-import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-code-editor',
@@ -7,61 +7,63 @@ import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/co
   styleUrls: ['./code-editor.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class CodeEditorComponent implements OnInit, AfterViewInit {
+export class CodeEditorComponent implements OnInit {
 
   constructor(private translate: TranslateService) { }
 
-  private get programmerContent(): string {
-    const university = this.translate.instant('code.university');
-    const english = this.translate.instant('code.english');
-    const spanish = this.translate.instant('code.spanish');
-
-    return `public Programmer SetBasicInfo()
-    {
-    return new ProgrammerBuilder()
-    .SetName('Jonasz')
-    .SetSurname('Makulak')
-    .SetDateOfBirth('1997-02-28')
-    .Graduate('${university}', TimeSpan.FromYears(2020-2016))
-    .Learn('${english}', Level.B2)
-    .Learn('${spanish}', Level.A1)
-    .Create();
-    }`;
-  }
-
-  private get aboutContent(): string {
-    const guitar = this.translate.instant('code.guitar');
-    const brewery = this.translate.instant('code.brewery');
-    const hitchhiking = this.translate.instant('code.hitchhiking');
-    const hackathons = this.translate.instant('code.hackathons');
-
-    return `public Programmer SetAdditionalInfo()
-    {
-    return SetBasicInfo()
-    .SetHobby('${guitar}')
-    .SetHobby('${brewery}')
-    .SetHobby('${hitchhiking}')
-    .SetInterest('${hackathons}')
-    .Create();
-    }`;
-  }
-
-  private get jobContent(): string {
-    return `public Job CreateDreamJob()
-    {
-    return new JobBuilder()
-    .AddRequirement('Dynamiczny zespół', EImportance.High)
-    .AddRequirement('Owocowe środy', EImportance.Medium)
-    .AddRequirement('Kartofel pod keczupem', EImportance.Low)
-    .Create();
-    }`;
-  }
+  private programmerContent: string;
+  private aboutContent: string;
+  private jobContent: string;
 
   ngOnInit() {
-  }
+    this.translate.get(['code.university', 'code.english', 'code.spanish',
+      'code.playingGuitar', 'code.homeBreweryAndWineMaking', 'code.hitchhiking',
+      'code.hackathons', 'code.mobileTechnologies', 'code.remoteWork',
+      'code.learnAndDevelopSkills', 'code.greatTeam', 'code.newTechnologies',
+      'code.interestingProjects', 'code.money'])
 
-  ngAfterViewInit() {
-    document.getElementById('programmerTab').click();
+      .subscribe({
+        next: (translations: any) => {
+          this.programmerContent =
+            `public Programmer SetBasicInfo()
+            {
+            return new ProgrammerBuilder()
+            .SetName('Jonasz')
+            .SetSurname('Makulak')
+            .SetDateOfBirth('1997-02-28')
+            .Graduate('${translations['code.university']}', TimeSpan.FromYears(2020-2016))
+            .Learn('${translations['code.english']}', Level.B2)
+            .Learn('${translations['code.spanish']}', Level.A1)
+            .Create();
+            }`;
+          this.aboutContent =
+            `public Programmer SetAdditionalInfo()
+            {
+            return SetBasicInfo()
+            .SetHobby('${translations['code.playingGuitar']}')
+            .SetHobby('${translations['code.homeBreweryAndWineMaking']}')
+            .SetHobby('${translations['code.hitchhiking']}')
+            .SetInterest('${translations['code.hackathons']}')
+            .SetInterest('${translations['code.mobileTechnologies']}')
+            .Create();
+            }`;
+
+          this.jobContent = `public Job CreateDreamJob()
+            {
+            return new JobBuilder()
+            .AddRequirement('${translations['code.remoteWork']}')
+            .AddRequirement('${translations['code.learnAndDevelopSkills']}')
+            .AddRequirement('${translations['code.greatTeam']}')
+            .AddRequirement('${translations['code.newTechnologies']}')
+            .AddRequirement('${translations['code.interestingProjects']}')
+            .AddRequirement('${translations['code.money']}')
+            .Create();
+            }`;
+
+
+          document.getElementById('programmerTab').click();
+        }
+      });
   }
 
   changeCard(sectionId: string) {
@@ -91,6 +93,10 @@ export class CodeEditorComponent implements OnInit, AfterViewInit {
   }
 
   formatContent(content: string): string {
+
+    if (!content) {
+      return;
+    }
 
     const spaces = window.innerWidth > 400 ? '   ' : ' ';
 
