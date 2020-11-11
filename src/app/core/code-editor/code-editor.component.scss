@@ -101,6 +101,8 @@ aside {
   padding: 7px 13px;
   color: #8a8a8a;
   text-align: right;
+  display:flex;
+  flex-direction: column;
 }
 
 article {

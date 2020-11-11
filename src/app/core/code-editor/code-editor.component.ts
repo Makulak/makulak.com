@@ -9,6 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class CodeEditorComponent implements OnInit {
 
+  linesArr = new Array(14);
+
   constructor(private translate: TranslateService) { }
 
   ngOnInit() {
