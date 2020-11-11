@@ -1,40 +1,49 @@
 app-container-base {
-    background-color: #010146;
-    display: block;
+  background-color: #010146;
+  display: block;
 }
 .contact-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 a {
   color: white;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 20px;
+  margin: 7px;
 }
 
 a img {
-    margin: 20px;
-    width: 80px;
-    filter: brightness(0) invert(1);
+  margin: 20px;
+  width: 50px;
+  filter: brightness(0) invert(1);
 }
 
 footer {
-    overflow: hidden;
-    background: #000000;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(1, 1, 70, 1) 90%);
-    min-height: 100px;
-    padding-top: 40px;
+  overflow: hidden;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(1, 1, 70, 1) 90%);
+  min-height: 100px;
+  padding-top: 40px;
 }
 
 footer p {
-    color: #757575;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+  color: #757575;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-device-width: 450px) {
+  a {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-device-width: 300px) {
+  .contact-list {
+    flex-direction: column;
+  }
 }
