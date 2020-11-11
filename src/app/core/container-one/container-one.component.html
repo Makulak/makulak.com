@@ -1,9 +1,9 @@
 <app-container-base>
   <header>
-    <app-navbar class="navbar"></app-navbar>
-    <section class="presentation">
-      <h1>Jonasz Makulak</h1>
-      <h2 translate>content.aspiringDeveloper</h2>
-    </section>
+    <app-navbar (toggledSideNav)="test.emit()" class="navbar"></app-navbar>
+      <section class="presentation">
+        <h1>Jonasz Makulak</h1>
+        <h2 translate>content.aspiringDeveloper</h2>
+      </section>
   </header>
 </app-container-base>

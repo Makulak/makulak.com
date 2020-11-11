@@ -1,4 +1,7 @@
 <div class="main-header">
+  <button class="hamburger-button" mat-icon-button (click)="toggledSideNav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span class="logo">JM</span>
   <nav>
     <ul class="menu">
@@ -14,12 +17,12 @@
       <li>
         <a class="menu-button" (click)="coreService.scrollTo('container-four')" translate>navbar.contact</a>
       </li>
-      <li>
+      <!-- <li>
         <a class="menu-button" (click)="coreService.changeLanguage('en')" translate>navbar.enLanguage</a>
       </li>
       <li>
         <a class="menu-button" (click)="coreService.changeLanguage('pl')"translate>navbar.plLanguage</a>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </div>

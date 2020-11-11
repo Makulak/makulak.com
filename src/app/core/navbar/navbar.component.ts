@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CoreService } from '../core.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { CoreService } from '../core.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  @Output() toggledSideNav = new EventEmitter();
 
   constructor(public coreService: CoreService) { }
 

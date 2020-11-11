@@ -46,6 +46,9 @@
 }
 
 @media screen and (min-device-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
   .menu {
     display: flex;
     visibility: visible;

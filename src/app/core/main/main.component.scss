@@ -1,3 +1,15 @@
 #base {
     height: 150px;
 }
+mat-sidenav {
+  position: fixed;
+  width: 70%;
+  padding-top: 50px;
+}
+
+mat-sidenav a {
+  font-size: 1.3rem;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}

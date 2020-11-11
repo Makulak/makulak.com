@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CoreService } from '../core.service';
 
 @Component({
@@ -8,9 +8,10 @@ import { CoreService } from '../core.service';
 })
 export class ContainerOneComponent implements OnInit {
 
+  @Output() test = new EventEmitter();
+
   constructor(public coreService: CoreService) { }
 
   ngOnInit() {
   }
-
 }

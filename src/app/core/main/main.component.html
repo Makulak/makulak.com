@@ -1,4 +1,22 @@
-<app-container-one id="container-one"></app-container-one>
-<app-container-two id="container-two"></app-container-two>
-<app-container-three id="container-three"></app-container-three>
-<app-container-four id="container-four"></app-container-four>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <a mat-list-item>
+      <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+  </a>
+  <a mat-list-item>
+      <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">About</span>
+  </a>
+  <a mat-list-item>
+      <mat-icon>account_balance</mat-icon><span class="nav-caption">Experience</span>
+  </a>
+  <a mat-list-item>
+    <mat-icon>account_balance</mat-icon><span class="nav-caption">Contact</span>
+</a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-container-one (test)="sidenav.open()" id="container-one"></app-container-one>
+    <app-container-two id="container-two"></app-container-two>
+    <app-container-three id="container-three"></app-container-three>
+    <app-container-four id="container-four"></app-container-four>
+  </mat-sidenav-content>
+</mat-sidenav-container>
