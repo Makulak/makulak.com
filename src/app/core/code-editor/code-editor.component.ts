@@ -11,64 +11,12 @@ export class CodeEditorComponent implements OnInit {
 
   constructor(private translate: TranslateService) { }
 
-  private programmerContent: string;
-  private aboutContent: string;
-  private jobContent: string;
-
   ngOnInit() {
-    this.translate.get(['code.university', 'code.english', 'code.spanish',
-      'code.playingGuitar', 'code.homeBreweryAndWineMaking', 'code.hitchhiking',
-      'code.hackathons', 'code.mobileTechnologies', 'code.remoteWork',
-      'code.learnAndDevelopSkills', 'code.greatTeam', 'code.newTechnologies',
-      'code.interestingProjects', 'code.money'])
-
-      .subscribe({
-        next: (translations: any) => {
-          this.programmerContent =
-            `public Programmer SetBasicInfo()
-            {
-            return new ProgrammerBuilder()
-            .SetName('Jonasz')
-            .SetSurname('Makulak')
-            .SetDateOfBirth('1997-02-28')
-            .Graduate('${translations['code.university']}', TimeSpan.FromYears(2020-2016))
-            .Learn('${translations['code.english']}', Level.B2)
-            .Learn('${translations['code.spanish']}', Level.A1)
-            .Create();
-            }`;
-          this.aboutContent =
-            `public Programmer SetAdditionalInfo()
-            {
-            return SetBasicInfo()
-            .SetHobby('${translations['code.playingGuitar']}')
-            .SetHobby('${translations['code.homeBreweryAndWineMaking']}')
-            .SetHobby('${translations['code.hitchhiking']}')
-            .SetInterest('${translations['code.hackathons']}')
-            .SetInterest('${translations['code.mobileTechnologies']}')
-            .Create();
-            }`;
-
-          this.jobContent = `public Job CreateDreamJob()
-            {
-            return new JobBuilder()
-            .AddRequirement('${translations['code.remoteWork']}')
-            .AddRequirement('${translations['code.learnAndDevelopSkills']}')
-            .AddRequirement('${translations['code.greatTeam']}')
-            .AddRequirement('${translations['code.newTechnologies']}')
-            .AddRequirement('${translations['code.interestingProjects']}')
-            .AddRequirement('${translations['code.money']}')
-            .Create();
-            }`;
-
-
-          document.getElementById('programmerTab').click();
-        }
-      });
+    document.getElementById('programmerTab').click();
   }
 
   changeCard(sectionId: string) {
     const tabs: HTMLCollectionOf<Element> = document.getElementsByClassName('tab');
-    const article: HTMLElement = document.getElementById('code-content');
 
     for (let i = 0; i < tabs.length; i++) {
       tabs[i].className = tabs[i].className.replace('active', '');
@@ -78,18 +26,83 @@ export class CodeEditorComponent implements OnInit {
 
     switch (sectionId) {
       case 'programmer':
-        article.innerHTML = this.formatContent(this.programmerContent);
+        this.setProgrammerContent();
         break;
       case 'about':
-        article.innerHTML = this.formatContent(this.aboutContent);
+        this.setAboutContent();
         break;
       case 'job':
-        article.innerHTML = this.formatContent(this.jobContent);
+        this.setJobContent();
         break;
       default:
-        article.innerHTML = this.formatContent(this.programmerContent);
+        this.setProgrammerContent();
         break;
     }
+  }
+
+  setProgrammerContent(): void {
+    this.translate.stream(['code.university', 'code.english', 'code.spanish'])
+      .subscribe({
+        next: (translations: any) => {
+          const content =
+            `public Programmer SetBasicInfo()
+          {
+          return new ProgrammerBuilder()
+          .SetName('Jonasz')
+          .SetSurname('Makulak')
+          .SetDateOfBirth('1997-02-28')
+          .Graduate('${translations['code.university']}', TimeSpan.FromYears(2020-2016))
+          .Learn('${translations['code.english']}', Level.B2)
+          .Learn('${translations['code.spanish']}', Level.A1)
+          .Create();
+          }`;
+
+          document.getElementById('code-content').innerHTML = this.formatContent(content);
+        }
+      });
+  }
+
+  setAboutContent(): void {
+    this.translate.stream(['code.playingGuitar', 'code.homeBreweryAndWineMaking',
+      'code.hitchhiking', 'code.hackathons', 'code.mobileTechnologies'])
+      .subscribe({
+        next: (translations: any) => {
+          const content =
+            `public Programmer SetAdditionalInfo()
+          {
+          return SetBasicInfo()
+          .SetHobby('${translations['code.playingGuitar']}')
+          .SetHobby('${translations['code.homeBreweryAndWineMaking']}')
+          .SetHobby('${translations['code.hitchhiking']}')
+          .SetInterest('${translations['code.hackathons']}')
+          .SetInterest('${translations['code.mobileTechnologies']}')
+          .Create();
+          }`;
+          document.getElementById('code-content').innerHTML = this.formatContent(content);
+        }
+      });
+  }
+
+  setJobContent(): void {
+    this.translate.stream(['code.remoteWork', 'code.learnAndDevelopSkills',
+      'code.greatTeam', 'code.newTechnologies', 'code.interestingProjects', 'code.money'])
+      .subscribe({
+        next: (translations: any) => {
+          const content =
+            `public Job CreateDreamJob()
+          {
+          return new JobBuilder()
+          .AddRequirement('${translations['code.remoteWork']}')
+          .AddRequirement('${translations['code.learnAndDevelopSkills']}')
+          .AddRequirement('${translations['code.greatTeam']}')
+          .AddRequirement('${translations['code.newTechnologies']}')
+          .AddRequirement('${translations['code.interestingProjects']}')
+          .AddRequirement('${translations['code.money']}')
+          .Create();
+          }`;
+          document.getElementById('code-content').innerHTML = this.formatContent(content);
+        }
+      });
   }
 
   formatContent(content: string): string {
@@ -125,7 +138,7 @@ export class CodeEditorComponent implements OnInit {
     content = content.replace(/'.*'/g, match => {
       return '<span class="orange-text">' + match + '</span>';
     });
-    content = content.replace(/EImportance|TimeSpan|Level|Job |Programmer /g, match => {
+    content = content.replace(/TimeSpan|Level|Job |Programmer /g, match => {
       return '<span class="green-text">' + match + '</span>';
     });
 
