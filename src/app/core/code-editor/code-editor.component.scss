@@ -139,6 +139,10 @@ footer {
 .green-text {
   color: #4ec9b0;
 }
+.email-text {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
 
 @media screen and (min-device-width: 450px) {
   .lines-code-wrapper {

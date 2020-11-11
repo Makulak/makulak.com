@@ -51,6 +51,7 @@ export class CodeEditorComponent implements OnInit {
           .SetName('Jonasz')
           .SetSurname('Makulak')
           .SetDateOfBirth('1997-02-28')
+          .SetEmail('moc.liamg@kalukam.j')
           .Graduate('${translations['code.university']}', TimeSpan.FromYears(2020-2016))
           .Learn('${translations['code.english']}', Level.B2)
           .Learn('${translations['code.spanish']}', Level.A1)
@@ -132,14 +133,17 @@ export class CodeEditorComponent implements OnInit {
     content = content.replace('return', match => {
       return '<span class="purple-text">' + match + '</span>';
     });
-    content = content.replace(/\.[\w]+/g, match => {
+    content = content.replace(/\.[A-Z][\w]+/g, match => {
       return '<span class="yellow-text">' + match + '</span>';
+    });
+    content = content.replace(/TimeSpan|Level|Job |Programmer /g, match => {
+      return '<span class="green-text">' + match + '</span>';
     });
     content = content.replace(/'.*'/g, match => {
       return '<span class="orange-text">' + match + '</span>';
     });
-    content = content.replace(/TimeSpan|Level|Job |Programmer /g, match => {
-      return '<span class="green-text">' + match + '</span>';
+    content = content.replace(/'.+@.+'/g, match => {
+      return '<span class="email-text">' + match + '</span>';
     });
 
     return content;
