@@ -21,7 +21,7 @@
     "playingGuitar":"Playing guitar",
     "homeBreweryAndWineMaking":"Home brewing and wine making",
     "hitchhiking":"Hitch-hicking",
-    "hackathons":"Taking part in hackathons",
+    "hackathons":"Attending hackathons",
     "mobileTechnologies":"Mobile technologies",
     "remoteWork":"Possibility to work remotely",
     "learnAndDevelopSkills":"Possibility to learn and develop skills",
@@ -40,6 +40,6 @@
     "agilero-item2": "Designing and creating projects from the begenning to the production launch",
     "agilero-item3": "Supporting customers",
     "agilero-item4": "Fixing bugs and maintaining legacy software",
-    "agilero-item5": "Creating and management of the network and the company server"
+    "agilero-item5": "Creating and managing the network and the company server"
   }
 }
