@@ -15,7 +15,7 @@
     "contact": "Contact"
   },
   "code": {
-    "university":"Jagiellonian university, Computer Science",
+    "university":"Jagiellonian University, Computer Science",
     "english":"English",
     "spanish":"Spanish",
     "playingGuitar":"Playing guitar",
@@ -37,7 +37,7 @@
     "hub-item2": "Solving problems as support",
     "hub-item3": "Writing documentation and specification",
     "agilero-item1": "Creating and developing Angular and .NET applications",
-    "agilero-item2": "Designing and creating projects from the begenning to the production launch",
+    "agilero-item2": "Designing and creating projects from the beginning to the production launch",
     "agilero-item3": "Supporting customers",
     "agilero-item4": "Fixing bugs and maintaining legacy software",
     "agilero-item5": "Creating and managing the network and the company server"
