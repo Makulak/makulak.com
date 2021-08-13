@@ -32,7 +32,7 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'makulak.com'
+    serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
     rootDirectory: '$(System.DefaultWorkingDirectory)'
