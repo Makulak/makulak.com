@@ -35,7 +35,7 @@ steps:
     serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
-    rootDirectory: '$(System.DefaultWorkingDirectory)/makulak.com/dist/OnlineCv/'
+    rootDirectory: '$(System.DefaultWorkingDirectory)/dist/OnlineCv/'
     filePatterns: '**'
     remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: true
