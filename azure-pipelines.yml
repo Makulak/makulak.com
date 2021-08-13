@@ -20,3 +20,24 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'makulak-com-service-connection'
+    KeyVaultName: 'makulak-com-key-vault'
+    SecretsFilter: '*'
+    RunAsPreJob: false
+
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: 'makulak.com'
+    username: '$(ftp-username)'
+    password: '$(ftp-password)'
+    rootDirectory: '$(System.DefaultWorkingDirectory)'
+    filePatterns: '**'
+    remoteDirectory: '/upload/$(Build.BuildId)/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
