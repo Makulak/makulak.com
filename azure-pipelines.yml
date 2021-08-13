@@ -31,7 +31,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'dist/OnlineCv'
+    rootFolderOrFile: 'dist'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -46,7 +46,7 @@ steps:
     serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
-    rootDirectory: 'dist/OnlineCv'
+    rootDirectory: 'dist'
     filePatterns: '**'
     remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: true
