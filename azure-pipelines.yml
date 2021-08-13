@@ -37,7 +37,7 @@ steps:
     password: '$(ftp-password)'
     rootDirectory: '$(System.DefaultWorkingDirectory)'
     filePatterns: '**'
-    remoteDirectory: '/upload/$(Build.BuildId)/'
+    remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: false
     cleanContents: false
     preservePaths: false
