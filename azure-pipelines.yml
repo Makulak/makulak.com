@@ -29,13 +29,24 @@ steps:
     SecretsFilter: '*'
     RunAsPreJob: false
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'dist/OnlineCv'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    publishLocation: 'pipeline'
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
-    rootDirectory: '$(System.DefaultWorkingDirectory)'
+    rootDirectory: 'dist/OnlineCv'
     filePatterns: '**'
     remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: true
