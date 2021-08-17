@@ -29,13 +29,19 @@ steps:
     SecretsFilter: '*'
     RunAsPreJob: false
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
-    rootDirectory: '$(Pipeline.Workspace)'
+    rootDirectory: '$(System.DefaultWorkingDirectory)'
     filePatterns: '**'
     remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: true
