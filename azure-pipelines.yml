@@ -30,7 +30,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'dist'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
@@ -40,7 +40,7 @@ steps:
     serverUrl: 'ftp://makulak.com'
     username: '$(ftp-username)'
     password: '$(ftp-password)'
-    rootDirectory: '$(System.DefaultWorkingDirectory)'
+    rootDirectory: 'dist'
     filePatterns: '**'
     remoteDirectory: '/domains/makulak.com/public_html/test/'
     clean: true
