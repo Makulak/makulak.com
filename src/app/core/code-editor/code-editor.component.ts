@@ -67,7 +67,7 @@ export class CodeEditorComponent implements OnInit {
 
   setAboutContent(): void {
     this.translate.stream(['code.playingGuitar', 'code.homeBreweryAndWineMaking',
-      'code.hitchhiking', 'code.hackathons', 'code.mobileTechnologies'])
+      'code.travelling', 'code.hackathons', 'code.mobileTechnologies'])
       .subscribe({
         next: (translations: any) => {
           const content =
