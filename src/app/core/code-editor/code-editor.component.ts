@@ -9,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class CodeEditorComponent implements OnInit {
 
-  linesArr = new Array(14);
+  linesArr = new Array(12);
 
   constructor(private translate: TranslateService) { }
 
@@ -43,7 +43,7 @@ export class CodeEditorComponent implements OnInit {
   }
 
   setProgrammerContent(): void {
-    this.translate.stream(['code.university', 'code.english', 'code.spanish'])
+    this.translate.stream(['code.university', 'code.english', 'code.spanish', 'code.seeBelow'])
       .subscribe({
         next: (translations: any) => {
           const content =
@@ -56,7 +56,7 @@ export class CodeEditorComponent implements OnInit {
           .SetEmail('moc.liamg@kalukam.j')
           .Graduate('${translations['code.university']}', TimeSpan.FromYears(2020-2016))
           .Learn('${translations['code.english']}', Level.B2)
-          .Learn('${translations['code.spanish']}', Level.A1)
+          .AddExperience('${translations['code.seeBelow']}')
           .Create();
           }`;
 
@@ -76,7 +76,7 @@ export class CodeEditorComponent implements OnInit {
           return SetBasicInfo()
           .SetHobby('${translations['code.playingGuitar']}')
           .SetHobby('${translations['code.homeBreweryAndWineMaking']}')
-          .SetHobby('${translations['code.hitchhiking']}')
+          .SetHobby('${translations['code.travelling']}')
           .SetInterest('${translations['code.hackathons']}')
           .SetInterest('${translations['code.mobileTechnologies']}')
           .Create();

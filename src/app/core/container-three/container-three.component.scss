@@ -15,6 +15,11 @@ app-experience-item ul {
     padding: 0px 20px;
     margin-bottom: 0px;
     font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.project-name {
+    font-weight: 500;
 }
 
 @media screen and (max-device-width: 450px) {

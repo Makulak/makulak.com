@@ -2,12 +2,14 @@
   <div>
     <img alt="company logo" class="company-logo" [src]="imageSrc">
   </div>
-    <section class="item-content">
-        <h1>{{position}}</h1>
-        <h2>{{companyName}}</h2>
-        <h3>{{dates}}</h3>
-        <div class="description">
-            <ng-content></ng-content>
-        </div>
-    </section>
+  <section class="item-content">
+    <header>
+      <h3>{{position}}</h3>
+      <h4>{{companyName}}</h4>
+      <h5>{{dates}}</h5>
+    </header>
+    <div class="description">
+      <ng-content></ng-content>
+    </div>
+  </section>
 </div>

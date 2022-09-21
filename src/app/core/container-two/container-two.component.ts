@@ -9,17 +9,15 @@ export class ContainerTwoComponent implements OnInit {
 
   skillsList: string[] = [
     'C#',
-    '.NET Core',
-    'EntityFramework',
-    'WinForms',
-    'WPF',
-    'DevExpress',
-    'SQL',
-    'HTML 5',
-    'CSS',
-    'JavaScript/TypeScript',
+    'Entity Framework',
+    'Vue',
+    'JavaScript / TypeScript',
+    'SQL - MSSQL, MariaDB, Postgres',
+    'ASP.NET Core',
+    'Azure',
     'Angular',
-    'PrimeNG'
+    'WinForms, WPF',
+    'NoSQL - MongoDB, CosmosDB'
   ];
 
   constructor() { }
